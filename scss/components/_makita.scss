@@ -1,0 +1,95 @@
+/* ---- MAKITA ----*/
+
+.mk-productos-contenedor {
+    height: auto;
+    width: 100%;
+    background-color: #ddeded;
+
+    .mk-sup-fondo {
+        width: 100%;
+        background: linear-gradient(to top, rgb(2, 133, 162), rgb(2, 73, 90));
+
+        .mk-banner-superior {
+            display: flex;
+            justify-content: center;
+            height: 90%;
+            width: 100%;
+            background: linear-gradient(to top, rgb(2, 133, 162), rgb(2, 73, 90));
+            animation-duration: 3s;
+            animation-name: slidein;
+
+            .mk-logo {
+                width: 14%;
+                height: 80%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .mk-banner-medio {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1% 0 1% 0;
+        background: linear-gradient(to bottom, rgb(2, 133, 162), rgb(36, 30, 30));
+        text-align: center;
+        background-position: center;
+
+        img {
+            width: 9%;
+            background-color: transparent;
+            filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5));
+        }
+
+        h2 {
+            font-family: inherit;
+            font-weight: bolder;
+            font-size: 35px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+    }
+
+    .titulo-catalogo p {
+        @include productos (#0285A2);
+    }
+
+    .card {
+        transition: 1s;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 10px 10px -6px black;
+            ;
+        }
+
+        img {
+            @include card-makita-img;
+        }
+
+        .card-text {
+            @include card-makita-p;
+        }
+    }
+
+    .mk-inf-fondo {
+        background-color: white;
+        padding: 0;
+
+        .mk-banner-inferior {
+            width: 100%;
+            object-fit: contain;
+            padding: 0;
+            margin: 8% 0 0 0;
+
+            img {
+                @include banner-inferior;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+/* ---- DEWALT ----*/
+
+.dw-productos-contenedor{
+    height: auto;
+    width: 100%;
+    .dw-sup-fondo{
+        width: 100%;
+        background: linear-gradient(to top, rgb(254,189,22), rgb(212, 161, 30));
+        .dw-banner-superior{
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to top, rgb(254,189,22), rgb(212, 161, 30));
+            animation-duration: 3s;
+            animation-name: slidein;
+            .dw-logo{
+                width: 13%;
+                height: 80%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+            }
+        }
+    }
+    .dw-banner-medio{
+        position: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding: 2% 0 2% 0;
+        margin: 3% 10% 3% 10%;
+        background-color: #FEBD16;
+        box-shadow: 0px 10px 10px -6px black;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        img{
+            height: 50%;
+            width: 25%;
+            background-color: black;
+            filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5));
+        }
+        h4{
+            font-family: bebas neue;
+            font-size: 35px;
+            color: black;
+            text-align: center;
+            margin-top: 2%;
+            position: relative;
+        }
+    }
+    .titulo-catalogo {
+        p {
+        @include productos (#000);
+        }
+    }
+    .card{
+        margin: 0 auto;
+        transition: 1s;
+        &:hover{
+            transform: scale(1.01);
+            box-shadow: 0px 10px 10px -6px black;
+        }
+        img{
+            @include card-dewalt-img;
+        }
+        .card-text{
+            @include card-dewalt-p;
+        }
+    }
+    .dw-inf-fondo{
+        
+        padding: 0.5rem 0 0 0;
+        .dw-banner-inferior{
+            width: 100%;
+            object-fit: contain;
+            padding-top: 2%;
+            margin-top: 8%;
+            background-color:#FEBD16;            
+            img{
+                @include banner-inferior;
+            }
+        }
+    }
+}

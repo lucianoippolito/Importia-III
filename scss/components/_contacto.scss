@@ -1,0 +1,111 @@
+/* ------ CONTACTO ------ */ 
+
+main{
+    .grid-contacto-contenedor{
+        background-image: url(../img/warehouse.jpg);
+        background-size: cover;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "col1 col2"
+        "col1 col2";
+        .columna1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 3%;
+            padding-right: 3%;
+            width: 100%;
+            min-width: 350px;
+            background-color: rgba(47, 79, 79, 0.396);
+            grid-area: col1;
+            .titulo-contacto{
+                font-family: fira sans;
+                padding-top: 8%;
+                color: rgb(227, 236, 251);
+            }
+            .formulario-contacto{
+                margin-top: 2%;
+                margin-bottom: 70px;
+                height: auto;    
+                .formulario{
+                    width: 80%;
+                    background: #4e5255c3;
+                    padding: 30px;
+                    margin: auto;
+                    margin-top: 50px;
+                    border-radius: 4px;
+                    color: black;
+                    box-shadow: 7px 13px 37px #000;
+                    transition: 1s;
+                    .h4contacto{
+                        color: rgb(227, 236, 251);
+                        font-family: fira sans;
+                    }
+                    .control{
+                        width: 100%;
+                        background: #c5ccd39a;
+                        padding: 10px;
+                        border-radius: 4px;
+                        margin-bottom: 16px;
+                        border: 1px solid #8c8e9464;
+                        font-size: 18px;
+                        font-family: fira sans;
+                        color: black;
+                        
+                    }
+                    .textarea{
+                        width: 100%;
+                        background: #c5ccd39a;
+                        padding: 10px;
+                        border-radius: 4px;
+                        margin-bottom: 16px;
+                        border: 1px solid #8c8e9464;
+                        font-size: 18px;
+                        color: black;
+                        font-family:fira sans;
+                        
+                    }
+                    #mensaje{
+                        height: 90px;
+                        font-size: 18px;
+                        font-family: fira sans;
+                        color: black;
+                    }
+                    .boton{
+                        width: 100%;
+                        background: #31343bdd;
+                        border: none;
+                        padding: 12px;
+                        color: white;
+                        margin: 16px 0;
+                        font-size: 16px;
+                        cursor: pointer;
+                        font-family: fira Sans;
+                        border-radius: 5px;
+                        transition: 1s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        .columna2{
+            max-height: 100%;
+            width: 60%;
+            grid-area: col2;
+        }
+        
+        
+        
+        
+        
+        }
+    }
+}

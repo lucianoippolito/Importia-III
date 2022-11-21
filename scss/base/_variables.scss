@@ -1,0 +1,99 @@
+
+/* -- paleta de color -- */
+$color-dw: #FEBD16;
+$color-dw2:#85723a;
+$color-mw: #DB021D;
+$color-mw2:#9c1525;
+$color-mk: #0285A2;
+$color-mk2:#145968;
+$color-mt: #1F4942;
+$color-mt2:#16463e;
+$color-dw-cards-bkg:#EEE;
+$color-dw-cards-ctn:#EEE;
+$color-mw-cards-bkg:#323232;
+$color-mw-cards-ctn:rgb(31, 29, 29);
+$color-mt-cards-ctn:#1F4942;
+
+$bg-color: #f7f6f2;
+$shdow-gray: #d3d3d5;
+
+/* -- keyframes -- */
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 0%;
+        height: 0%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes slideout{
+    from {
+        margin-left: 50%;
+        width: 0%;
+        height: 0%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@mixin card-makita-p {
+    font-size: 14px;
+    text-align: left;
+    }
+@mixin card-makita-img {
+    padding: 10%;
+}
+
+@mixin card-dewalt-p {
+    font-size: 14px;
+    text-align: left;
+    }
+@mixin card-dewalt-img {
+        padding: 10%;
+        transition: 1s;
+        
+    }
+
+@mixin card-milwaukee-img{
+    padding: 10%;
+    }
+    
+@mixin card-metabo-img{
+        padding: 10%;
+    }
+
+@mixin productos($color){
+        color: $color;
+        font-family: bebas neue;
+        font-size: 60px;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+@mixin banner-inferior{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+

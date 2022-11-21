@@ -1,0 +1,49 @@
+/* --- HEADER ---*/
+
+header{
+    .navbar {
+        font-family: fira sans;
+        background: rgb(248, 249, 250);
+        width: 100%;
+        padding-left: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 1px solid gray;
+        .container-fluid {
+            justify-content: space-between;
+            padding-bottom: 0;
+            padding-left: 0;
+            background-color: rgb(248, 249, 250);
+            
+                .navbar-brand {
+                    padding-left: 2%;
+                }
+                .logo-nav {
+                    max-width: 100px;
+                    max-height: 100px;
+                    transition: 1s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+                .navbar-collapse {
+                    background-color: rgb(248, 249, 250);
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 25px;
+                    ul {
+                        .nav-item {
+                            .iconos-redes {
+                                color: darkslategray;
+                                transition: 1s;
+                                &:hover {
+                                    color: #2CAAE1;
+                                    transform: scale(2);
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+

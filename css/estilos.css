@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Georgian:wght@200;400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* -- paleta de color -- */
+/* -- keyframes -- */
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 0%;
+    height: 0%; }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    height: 100%; } }
+
+@keyframes slideout {
+  from {
+    margin-left: 50%;
+    width: 0%;
+    height: 0%; }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    height: 100%; } }
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 100% 50%; } }
+
+/* --- HEADER ---*/
+header .navbar {
+  font-family: fira sans;
+  background: #f8f9fa;
+  width: 100%;
+  padding-left: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid gray; }
+  header .navbar .container-fluid {
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: #f8f9fa; }
+    header .navbar .container-fluid .navbar-brand {
+      padding-left: 2%; }
+    header .navbar .container-fluid .logo-nav {
+      max-width: 100px;
+      max-height: 100px;
+      transition: 1s; }
+      header .navbar .container-fluid .logo-nav:hover {
+        transform: scale(1.2); }
+    header .navbar .container-fluid .navbar-collapse {
+      background-color: #f8f9fa;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 25px; }
+      header .navbar .container-fluid .navbar-collapse ul .nav-item .iconos-redes {
+        color: darkslategray;
+        transition: 1s; }
+        header .navbar .container-fluid .navbar-collapse ul .nav-item .iconos-redes:hover {
+          color: #2CAAE1;
+          transform: scale(2); }
+
+.contenedor-portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+  width: 100%;
+  object-fit: contain; }
+  .contenedor-portada .cargo {
+    grid-area: cargo;
+    width: 100%; }
+    .contenedor-portada .cargo img {
+      width: 100%;
+      min-width: 300px; }
+  .contenedor-portada .titulo1 h1 {
+    font-family: fira sans;
+    font-size: 25px;
+    padding: 2% 10% 2% 10%;
+    color: grey;
+    text-align: center;
+    grid-area: titulo1;
+    width: fit-content; }
+  .contenedor-portada .titulo2 {
+    font-family: fira sans;
+    font-weight: bold;
+    width: 90%;
+    margin: 5%;
+    font-size: 55px;
+    color: grey;
+    text-align: center;
+    grid-area: titulo2; }
+  .contenedor-portada span {
+    font-size: 45px;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    background: url(../img/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden; }
+
+.container-prod {
+  display: grid;
+  column-gap: 5%;
+  row-gap: 10%;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "logos1 logos2" "logos3 logos4";
+  width: 80%; }
+  .container-prod .tarjeta {
+    position: relative;
+    min-width: 150px;
+    min-height: 110px;
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+    overflow: hidden;
+    margin-bottom: 5%; }
+    .container-prod .tarjeta:before {
+      z-index: 99;
+      position: absolute;
+      top: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #f7f6f2; }
+    .container-prod .tarjeta:after {
+      z-index: 99;
+      position: absolute;
+      bottom: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #f7f6f2; }
+    .container-prod .tarjeta h2 {
+      z-index: 99;
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      bottom: 0;
+      right: 25%;
+      font-size: 58px;
+      font-weight: 700;
+      color: #fff; }
+    .container-prod .tarjeta p {
+      z-index: 99;
+      position: absolute;
+      top: 30%;
+      right: 8%;
+      color: #efeeee;
+      opacity: 0.9;
+      font-size: 14px;
+      letter-spacing: 1px;
+      writing-mode: vertical-lr;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .container-prod .tarjeta .pic {
+      object-fit: contain;
+      z-index: 100;
+      width: 80%;
+      height: 100%;
+      background-size: 100% 100%;
+      filter: grayscale(100%); }
+    .container-prod .tarjeta .boton {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 20%;
+      height: 100%;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 2.5s ease;
+      mix-blend-mode: hard-light; }
+      .container-prod .tarjeta .boton .linkcito {
+        padding: 1% 20% 180% 80%;
+        height: 30px;
+        width: 30px; }
+    .container-prod .tarjeta:hover .boton {
+      transform: scale(16.5); }
+    .container-prod .tarjeta:hover p {
+      color: #1b1a1a; }
+    .container-prod .tarjeta:hover .pic {
+      filter: grayscale(0); }
+  .container-prod .tarj-dw {
+    grid-area: logos1;
+    margin: 10% 5% 10% 5%;
+    transition: 2s; }
+    .container-prod .tarj-dw:hover {
+      transform: scale(1.01);
+      filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5)); }
+    .container-prod .tarj-dw .pic {
+      background-image: url("../img/tarj-dw.jpg"); }
+    .container-prod .tarj-dw .boton-dw {
+      background-color: #85723a; }
+  .container-prod .tarj-mw {
+    grid-area: logos2;
+    margin: 10% 5% 10% 5%;
+    transition: 2s; }
+    .container-prod .tarj-mw:hover {
+      transform: scale(1.01);
+      filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5)); }
+    .container-prod .tarj-mw .pic {
+      background-image: url("../img/tarj-mw.jpg"); }
+    .container-prod .tarj-mw .boton-mw {
+      background-color: #9c1525; }
+  .container-prod .tarj-mk {
+    margin: 10% 5% 10% 5%;
+    grid-area: logos3;
+    transition: 2s; }
+    .container-prod .tarj-mk:hover {
+      transform: scale(1.01);
+      filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5)); }
+    .container-prod .tarj-mk .pic {
+      background-image: url("../img/tarjeta-mk.png"); }
+    .container-prod .tarj-mk .boton-mk {
+      background-color: #145968; }
+  .container-prod .tarj-mt {
+    grid-area: logos4;
+    margin: 10% 5% 10% 5%;
+    transition: 2s; }
+    .container-prod .tarj-mt:hover {
+      transform: scale(1.01);
+      filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5)); }
+    .container-prod .tarj-mt .pic {
+      background-image: url("../img/tarj-mt.jpg"); }
+    .container-prod .tarj-mt .boton-mt {
+      background-color: #16463e; }
+
+/* ------ CONTACTO ------ */
+main .grid-contacto-contenedor {
+  background-image: url(../img/warehouse.jpg);
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "col1 col2" "col1 col2"; }
+  main .grid-contacto-contenedor .columna1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 100%;
+    min-width: 350px;
+    background-color: rgba(47, 79, 79, 0.396);
+    grid-area: col1; }
+    main .grid-contacto-contenedor .columna1 .titulo-contacto {
+      font-family: fira sans;
+      padding-top: 8%;
+      color: #e3ecfb; }
+    main .grid-contacto-contenedor .columna1 .formulario-contacto {
+      margin-top: 2%;
+      margin-bottom: 70px;
+      height: auto; }
+      main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario {
+        width: 80%;
+        background: #4e5255c3;
+        padding: 30px;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 4px;
+        color: black;
+        box-shadow: 7px 13px 37px #000;
+        transition: 1s; }
+        main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario .h4contacto {
+          color: #e3ecfb;
+          font-family: fira sans; }
+        main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario .control {
+          width: 100%;
+          background: #c5ccd39a;
+          padding: 10px;
+          border-radius: 4px;
+          margin-bottom: 16px;
+          border: 1px solid #8c8e9464;
+          font-size: 18px;
+          font-family: fira sans;
+          color: black; }
+        main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario .textarea {
+          width: 100%;
+          background: #c5ccd39a;
+          padding: 10px;
+          border-radius: 4px;
+          margin-bottom: 16px;
+          border: 1px solid #8c8e9464;
+          font-size: 18px;
+          color: black;
+          font-family: fira sans; }
+        main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario #mensaje {
+          height: 90px;
+          font-size: 18px;
+          font-family: fira sans;
+          color: black; }
+        main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario .boton {
+          width: 100%;
+          background: #31343bdd;
+          border: none;
+          padding: 12px;
+          color: white;
+          margin: 16px 0;
+          font-size: 16px;
+          cursor: pointer;
+          font-family: fira Sans;
+          border-radius: 5px;
+          transition: 1s; }
+          main .grid-contacto-contenedor .columna1 .formulario-contacto .formulario .boton:hover {
+            transform: scale(1.05); }
+    main .grid-contacto-contenedor .columna1 .columna2 {
+      max-height: 100%;
+      width: 60%;
+      grid-area: col2; }
+
+/* ---- DEWALT ----*/
+.dw-productos-contenedor {
+  height: auto;
+  width: 100%; }
+  .dw-productos-contenedor .dw-sup-fondo {
+    width: 100%;
+    background: linear-gradient(to top, #febd16, #d4a11e); }
+    .dw-productos-contenedor .dw-sup-fondo .dw-banner-superior {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to top, #febd16, #d4a11e);
+      animation-duration: 3s;
+      animation-name: slidein; }
+      .dw-productos-contenedor .dw-sup-fondo .dw-banner-superior .dw-logo {
+        width: 13%;
+        height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+  .dw-productos-contenedor .dw-banner-medio {
+    position: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 2% 0 2% 0;
+    margin: 3% 10% 3% 10%;
+    background-color: #FEBD16;
+    box-shadow: 0px 10px 10px -6px black;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .dw-productos-contenedor .dw-banner-medio img {
+      height: 50%;
+      width: 25%;
+      background-color: black;
+      filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5)); }
+    .dw-productos-contenedor .dw-banner-medio h4 {
+      font-family: bebas neue;
+      font-size: 35px;
+      color: black;
+      text-align: center;
+      margin-top: 2%;
+      position: relative; }
+  .dw-productos-contenedor .titulo-catalogo p {
+    color: #000;
+    font-family: bebas neue;
+    font-size: 60px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 5%; }
+  .dw-productos-contenedor .card {
+    margin: 0 auto;
+    transition: 1s; }
+    .dw-productos-contenedor .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 10px 10px -6px black; }
+    .dw-productos-contenedor .card img {
+      padding: 10%;
+      transition: 1s; }
+    .dw-productos-contenedor .card .card-text {
+      font-size: 14px;
+      text-align: left; }
+  .dw-productos-contenedor .dw-inf-fondo {
+    padding: 0.5rem 0 0 0; }
+    .dw-productos-contenedor .dw-inf-fondo .dw-banner-inferior {
+      width: 100%;
+      object-fit: contain;
+      padding-top: 2%;
+      margin-top: 8%;
+      background-color: #FEBD16; }
+      .dw-productos-contenedor .dw-inf-fondo .dw-banner-inferior img {
+        display: block;
+        width: 100%;
+        margin: 0 auto; }
+
+/* ---- MAKITA ----*/
+.mk-productos-contenedor {
+  height: auto;
+  width: 100%;
+  background-color: #ddeded; }
+  .mk-productos-contenedor .mk-sup-fondo {
+    width: 100%;
+    background: linear-gradient(to top, #0285a2, #02495a); }
+    .mk-productos-contenedor .mk-sup-fondo .mk-banner-superior {
+      display: flex;
+      justify-content: center;
+      height: 90%;
+      width: 100%;
+      background: linear-gradient(to top, #0285a2, #02495a);
+      animation-duration: 3s;
+      animation-name: slidein; }
+      .mk-productos-contenedor .mk-sup-fondo .mk-banner-superior .mk-logo {
+        width: 14%;
+        height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+  .mk-productos-contenedor .mk-banner-medio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1% 0 1% 0;
+    background: linear-gradient(to bottom, #0285a2, #241e1e);
+    text-align: center;
+    background-position: center; }
+    .mk-productos-contenedor .mk-banner-medio img {
+      width: 9%;
+      background-color: transparent;
+      filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5)); }
+    .mk-productos-contenedor .mk-banner-medio h2 {
+      font-family: inherit;
+      font-weight: bolder;
+      font-size: 35px;
+      color: white;
+      text-align: center;
+      position: relative; }
+  .mk-productos-contenedor .titulo-catalogo p {
+    color: #0285A2;
+    font-family: bebas neue;
+    font-size: 60px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 5%; }
+  .mk-productos-contenedor .card {
+    transition: 1s; }
+    .mk-productos-contenedor .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 10px 10px -6px black; }
+    .mk-productos-contenedor .card img {
+      padding: 10%; }
+    .mk-productos-contenedor .card .card-text {
+      font-size: 14px;
+      text-align: left; }
+  .mk-productos-contenedor .mk-inf-fondo {
+    background-color: white;
+    padding: 0; }
+    .mk-productos-contenedor .mk-inf-fondo .mk-banner-inferior {
+      width: 100%;
+      object-fit: contain;
+      padding: 0;
+      margin: 8% 0 0 0; }
+      .mk-productos-contenedor .mk-inf-fondo .mk-banner-inferior img {
+        display: block;
+        width: 100%;
+        margin: 0 auto; }
+
+/* ---- METABO ----*/
+.mt-productos-contenedor {
+  height: auto;
+  width: 100%;
+  background-color: #dde6e5; }
+  .mt-productos-contenedor .mt-sup-fondo {
+    width: 100%;
+    background: linear-gradient(to top, #1f4942, #241e1e); }
+    .mt-productos-contenedor .mt-sup-fondo .mt-banner-superior {
+      display: flex;
+      justify-content: center;
+      height: 90%;
+      width: 100%;
+      background: linear-gradient(to top, #1f4942, #241e1e);
+      background-color: #1F4942;
+      animation-duration: 3s;
+      animation-name: slidein; }
+      .mt-productos-contenedor .mt-sup-fondo .mt-banner-superior .mt-logo {
+        display: flex;
+        width: 14%;
+        height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+  .mt-productos-contenedor .mt-banner-medio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to bottom, #1f4942, #241e1e);
+    justify-content: space-around;
+    width: 100%;
+    padding: 2% 0 2% 0;
+    background-color: #1F4942;
+    text-align: center;
+    background-position: center; }
+    .mt-productos-contenedor .mt-banner-medio img {
+      width: 10%;
+      background-color: transparent;
+      filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5)); }
+    .mt-productos-contenedor .mt-banner-medio h2 {
+      font-family: inherit;
+      font-weight: bolder;
+      font-size: 35px;
+      color: white;
+      text-align: center;
+      position: relative; }
+  .mt-productos-contenedor .titulo-catalogo p {
+    color: #1F4942;
+    font-family: bebas neue;
+    font-size: 60px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 5%; }
+  .mt-productos-contenedor .card {
+    transition: 1s; }
+    .mt-productos-contenedor .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 10px 10px -6px black; }
+    .mt-productos-contenedor .card img {
+      padding: 10%; }
+    .mt-productos-contenedor .card .card-text {
+      font-size: 14px;
+      text-align: left; }
+  .mt-productos-contenedor .mt-inf-fondo {
+    background-color: #e41919;
+    padding: 0; }
+    .mt-productos-contenedor .mt-inf-fondo .mt-banner-inferior {
+      width: 100%;
+      object-fit: contain;
+      padding: 0;
+      margin: 8% 0% 0% 0%; }
+      .mt-productos-contenedor .mt-inf-fondo .mt-banner-inferior img {
+        display: block;
+        width: 100%;
+        margin: 0 auto; }
+
+/* ---- MILWAUKEE ---- */
+.mw-productos-contenedor {
+  background-color: #000000;
+  height: auto;
+  width: 100%; }
+  .mw-productos-contenedor .mw-sup-fondo {
+    width: 100%;
+    background: linear-gradient(to bottom, #6e0310, #DB021D); }
+    .mw-productos-contenedor .mw-sup-fondo .mw-banner-superior {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to bottom, #6e0310, #DB021D);
+      animation-duration: 3s;
+      animation-name: slidein; }
+      .mw-productos-contenedor .mw-sup-fondo .mw-banner-superior .mw-logo {
+        width: 9%;
+        padding-top: 5px;
+        padding-bottom: 5px; }
+  .mw-productos-contenedor .mw-banner-medio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 10px -6px #484848;
+    width: 80%;
+    padding: 2% 0 2% 0;
+    margin: 2% 10% 0% 10%;
+    background-color: #DB021D;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .mw-productos-contenedor .mw-banner-medio img {
+      height: 50%;
+      filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5)); }
+    .mw-productos-contenedor .mw-banner-medio h4 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      margin-top: 3%;
+      position: relative; }
+  .mw-productos-contenedor .titulo-catalogo p {
+    color: #eee;
+    font-family: bebas neue;
+    font-size: 60px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 5%; }
+  .mw-productos-contenedor .mw-inf-fondo {
+    background-color: #000000; }
+  .mw-productos-contenedor .mw-banner-inferior {
+    width: 100%;
+    padding: 8% 0 0% 0;
+    margin: 2% 0% 0% 0%;
+    background-color: #000000; }
+    .mw-productos-contenedor .mw-banner-inferior img {
+      display: block;
+      width: 100%;
+      margin: 0 auto; }
+  .mw-productos-contenedor .card {
+    transition: 1s; }
+    .mw-productos-contenedor .card:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 10px 10px -6px #3b3a3a; }
+    .mw-productos-contenedor .card img {
+      padding: 10%;
+      transition: 1s; }
+    .mw-productos-contenedor .card .card-text {
+      font-size: 14px;
+      text-align: left; }
+
+/* -- EMPRESA -- */
+.container-fluid {
+  padding-left: 0;
+  padding-top: 0; }
+  .container-fluid img {
+    width: 100%; }
+  .container-fluid .row .seccion-texto {
+    margin-top: 5%; }
+    .container-fluid .row .seccion-texto .empresa-h3 {
+      padding: 5% 5% 0% 5%;
+      text-align: center;
+      font-family: fira sans;
+      font-size: 35px;
+      font-weight: bold;
+      color: grey; }
+    .container-fluid .row .seccion-texto p {
+      margin-top: 5%;
+      padding: 0% 10% 5% 10%;
+      font-family: fira sans;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: justify;
+      color: #3c3939; }
+  .container-fluid .row .seccion-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .container-fluid .row .seccion-foto img {
+      display: block;
+      margin: auto;
+      padding: 0% 5% 5% 5%;
+      width: 90%; }
+
+/* --- FOOTER --*/
+footer {
+  width: 100%;
+  margin-top: auto;
+  color: white;
+  font-size: 13px;
+  padding: 30px 0px 20px;
+  background: linear-gradient(to right, #867f7f, #241e1e); }
+  footer .container .row .logo-importia-blanco img {
+    width: 150px;
+    transition: 1s; }
+    footer .container .row .logo-importia-blanco img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0.5em 0.7em 0.5em rgba(0, 0, 0, 0.5)); }
+  footer hr {
+    width: 90%;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    margin: 15px auto 20px; }
+
+/*----- MEDIA QUERIES --------*/
+@media screen and (max-width: 1150px) {
+  /*----INDEX----*/
+  .titulo1 h1 {
+    font-size: 25px; }
+    .titulo1 h1 .container-prod .tarjeta h2 {
+      font-size: 50px; } }
+
+@media screen and (max-width: 1000px) {
+  body {
+    min-width: 100vw; }
+  /*----INDEX----*/
+  .contenedorportada .titulo1 h1 {
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center; }
+  .contenedorportada .titulo2 h3 {
+    font-size: 24px;
+    margin-top: 35px;
+    text-align: center; }
+  .container-prod .tarjeta h2 {
+    font-size: 40px; }
+  .container-prod .tarjeta p {
+    font-size: 13px; }
+  .dw-productos-contenedor .dw-banner-medio h4 {
+    font-size: 20px;
+    width: 80%;
+    margin: 3% 10% 3% 10%; }
+  .mw-productos-contenedor .mw-banner-medio h4 {
+    font-size: 18px;
+    width: 80%;
+    margin: 3% 10% 3% 10%; }
+  /*---- CONTACTO -----*/
+  .columna1 {
+    min-width: 50vw; } }
+
+@media screen and (max-width: 800px) {
+  /*----INDEX----*/
+  body {
+    min-width: 350px; }
+  main {
+    margin-top: 0; }
+  .contenedor-portada .titulo1 h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center; }
+  .contenedor-portada .titulo2 h3 {
+    font-size: 30px;
+    text-align: center; }
+  .contenedor-portada .titulo2 h4 {
+    padding: 1.5em 0em;
+    width: auto; }
+  .contenedor-portada span {
+    font-size: 25px; }
+  .container-prod {
+    display: grid;
+    row-gap: 5%;
+    margin-bottom: 30%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logos1" "logos2" "logos3" "logos4";
+    justify-items: center;
+    align-items: center;
+    position: relative; }
+    .container-prod .tarjeta {
+      width: 80%;
+      height: 100%;
+      min-height: 55px; }
+      .container-prod .tarjeta h2 {
+        font-size: 35px; }
+  /*---- CONTACTO -----*/
+  main .grid-contacto-contenedor .columna1 {
+    min-width: 100vw; }
+  /*-- MILWAUKEE -- */
+  .mw-productos-contenedor .mw-banner-medio h4 {
+    font-size: 15px;
+    width: 80%;
+    margin: 3%; }
+  .mw-productos-contenedor .titulo-catalogo p {
+    font-size: 40px; }
+  /*-- MAKITA -- */
+  .mk-productos-contenedor .titulo-catalogo p {
+    font-size: 40px; }
+  /*-- METABO -- */
+  .mt-productos-contenedor .titulo-catalogo p {
+    font-size: 40px; }
+  /*-- DEWALT -- */
+  .dw-productos-contenedor .titulo-catalogo p {
+    font-size: 40px; } }
+
+@media screen and (max-width: 520px) {
+  /*----INDEX----*/
+  .contenedor-portada {
+    min-width: 350px; }
+    .contenedor-portada .titulo1 h1 {
+      font-size: 12px; }
+    .contenedor-portada .titulo2 h3 {
+      font-size: 20px;
+      margin-top: 45px;
+      text-align: center; }
+    .contenedor-portada .titulo2 h4 span {
+      font-size: 25px; }
+    .contenedor-portada .container-prod .tarjeta {
+      width: 80%;
+      height: 100%;
+      font-size: 25px; }
+      .contenedor-portada .container-prod .tarjeta p {
+        font-size: 9px; }
+      .contenedor-portada .container-prod .tarjeta h2 {
+        font-size: 28px; }
+      .contenedor-portada .container-prod .tarjeta:hover .boton {
+        transform: scale(12); }
+    .contenedor-portada .cargo {
+      height: 35%; }
+    .contenedor-portada .cargo img {
+      width: 100%; }
+    .contenedor-portada .titulo1 h1 {
+      font-size: 15px;
+      margin-top: 15px; }
+  footer {
+    background: linear-gradient(to bottom, #867f7f, #241e1e);
+    min-width: 350px; }
+  /*--- EMPRESA ---*/
+  main .grid-contacto-contenedor .columna1 {
+    min-width: 350px; }
+  /*--- DEWALT ---*/
+  .dw-productos-contenedor .card {
+    margin-left: 10%;
+    margin-right: 10%; }
+    .dw-productos-contenedor .card .card-text {
+      font-size: 12px; }
+  .dw-productos-contenedor .dw-banner-medio h4 {
+    font-size: 12px;
+    width: 80%; }
+  .dw-productos-contenedor .dw-banner-medio .dw-banner-inferior img {
+    width: 40%; }
+  /*--- MILWAUKEE ---*/
+  .mw-productos-contenedor .mw-banner-medio h4 {
+    font-size: 10px;
+    width: 80%; }
+  .mw-productos-contenedor .m18 {
+    width: 20%; }
+  .mw-productos-contenedor .card {
+    margin-left: 10%;
+    margin-right: 10%; }
+    .mw-productos-contenedor .card .card-text {
+      font-size: 12px; }
+  /*--- MAKITA ---*/
+  .mk-productos-contenedor .card {
+    margin-left: 10%;
+    margin-right: 10%; }
+    .mk-productos-contenedor .card .card-text {
+      font-size: 12px; }
+  /*--- METABO ---*/
+  .mt-productos-contenedor .card {
+    margin-left: 10%;
+    margin-right: 10%; }
+    .mt-productos-contenedor .card .card-text {
+      font-size: 12px; } }
